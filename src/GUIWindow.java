@@ -57,7 +57,15 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                     textArea5.append("\n " + task);
                 }
             }else if(text.equals("enterCompleted")){
-
+                String dateAndTask = textField2.getText();
+                String day = dateAndTask.substring(0, dateAndTask.indexOf(", "));
+                String task = dateAndTask.substring(dateAndTask.indexOf(", ") +1);
+                int len = task.length();
+                if(day.equals("Monday")){
+                    String currentText = textArea1.getText();
+                    textArea1.setText(currentText.substring(0, currentText.indexOf(task)));
+                    textArea1.append(currentText.substring(currentText.indexOf(task)+len));
+                }
             }else if(text.equals("Reset")){
                 textArea1.setText("");
                 textArea2.setText("");
