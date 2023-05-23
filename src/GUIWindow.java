@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 import java.awt.event.ActionEvent;
@@ -16,17 +17,18 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
     private JButton enterTaskButton;
     private JButton enterCompletedButton;
     private JButton resetButton;
+    private JCheckBox checkBox1;
 
     public GUIWindow(){
-        textField1.setText("Enter task to do");
-        textField2.setText("Enter task you've completed");
+        textField1.setText("Enter task to do : (day, task)");
+        textField2.setText("Enter task you've completed: (day, task)");
         createUIComponents();
     }
 
     private void createUIComponents() {
         setContentPane(mainPanel);
-        setTitle("Planner");
-        setSize(1000,600);
+        setTitle("Planner/To do List");
+        setSize(900,600);
 
         setLocation(450, 100);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -56,21 +58,39 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                 }else if (day.equals("Friday")){
                     textArea5.append("\n " + task);
                 }
+                textField1.setText("");
             }else if(text.equals("enterCompleted")){
                 String dateAndTask = textField2.getText();
-                String day = dateAndTask.substring(0, dateAndTask.indexOf(", "));
+                String day = dateAndTask.substring(0, dateAndTask.indexOf(", ")).toLowerCase();
                 String task = dateAndTask.substring(dateAndTask.indexOf(", ") +1);
                 int len = task.length();
-                if(day.equals("Monday")){
+                if(day.equals("monday")){
                     String currentText = textArea1.getText();
                     String before = currentText.substring(0, currentText.indexOf(task));
                     String after = currentText.substring(currentText.indexOf(task)+len);
                     textArea1.setText(before + after);
-//                    textArea1.setText(currentText.substring(0, currentText.indexOf(task)));
-//                    textArea1.append(currentText.substring(currentText.indexOf(task)+len));
-                }else if(day.equals("Tuesday")){
-
+                }else if(day.equals("tuesday")){
+                    String currentText = textArea2.getText();
+                    String before = currentText.substring(0, currentText.indexOf(task));
+                    String after = currentText.substring(currentText.indexOf(task)+len);
+                    textArea2.setText(before + after);
+                }else if (day.equals("wednesday")){
+                    String currentText = textArea3.getText();
+                    String before = currentText.substring(0, currentText.indexOf(task));
+                    String after = currentText.substring(currentText.indexOf(task)+len);
+                    textArea3.setText(before + after);
+                }else if(day.equals("thursday")){
+                    String currentText = textArea4.getText();
+                    String before = currentText.substring(0, currentText.indexOf(task));
+                    String after = currentText.substring(currentText.indexOf(task)+len);
+                    textArea4.setText(before + after);
+                }else if(day.equals("friday")){
+                    String currentText = textArea5.getText();
+                    String before = currentText.substring(0, currentText.indexOf(task));
+                    String after = currentText.substring(currentText.indexOf(task)+len);
+                    textArea5.setText(before + after);
                 }
+                textField2.setText("");
             }else if(text.equals("Reset")){
                 textArea1.setText("");
                 textArea2.setText("");
@@ -78,8 +98,6 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                 textArea4.setText("");
                 textArea5.setText("");
             }
-
-
         }
     }
 
