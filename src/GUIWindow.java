@@ -64,32 +64,22 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                 String day = dateAndTask.substring(0, dateAndTask.indexOf(", ")).toLowerCase();
                 String task = dateAndTask.substring(dateAndTask.indexOf(", ") +1);
                 int len = task.length();
+                JTextArea t = textArea1;
                 if(day.equals("monday")){
-                    String currentText = textArea1.getText();
-                    String before = currentText.substring(0, currentText.indexOf(task));
-                    String after = currentText.substring(currentText.indexOf(task)+len);
-                    textArea1.setText(before + after);
+                    t= textArea1;
                 }else if(day.equals("tuesday")){
-                    String currentText = textArea2.getText();
-                    String before = currentText.substring(0, currentText.indexOf(task));
-                    String after = currentText.substring(currentText.indexOf(task)+len);
-                    textArea2.setText(before + after);
+                    t= textArea2;
                 }else if (day.equals("wednesday")){
-                    String currentText = textArea3.getText();
-                    String before = currentText.substring(0, currentText.indexOf(task));
-                    String after = currentText.substring(currentText.indexOf(task)+len);
-                    textArea3.setText(before + after);
+                    t= textArea3;
                 }else if(day.equals("thursday")){
-                    String currentText = textArea4.getText();
-                    String before = currentText.substring(0, currentText.indexOf(task));
-                    String after = currentText.substring(currentText.indexOf(task)+len);
-                    textArea4.setText(before + after);
+                    t= textArea4;
                 }else if(day.equals("friday")){
-                    String currentText = textArea5.getText();
-                    String before = currentText.substring(0, currentText.indexOf(task));
-                    String after = currentText.substring(currentText.indexOf(task)+len);
-                    textArea5.setText(before + after);
+                    t= textArea5;
                 }
+                String currentText = t.getText();
+                String before = currentText.substring(0, currentText.indexOf(task));
+                String after = currentText.substring(currentText.indexOf(task)+len);
+                t.setText(before + after);
                 textField2.setText("");
             }else if(text.equals("Reset")){
                 textArea1.setText("");
@@ -99,6 +89,7 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                 textArea5.setText("");
             }
         }
+
     }
 
     @Override
