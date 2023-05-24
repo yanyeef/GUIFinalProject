@@ -48,7 +48,7 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                 String day = dateAndTask.substring(0, dateAndTask.indexOf(", "));
                 String task = dateAndTask.substring(dateAndTask.indexOf(", ") +1);
                 if(day.equals("Monday")){
-                    textArea1.append("\n " + task);
+                   textArea1.append("\n " + task);
                 } else if (day.equals("Tuesday")){
                     textArea2.append("\n " + task);
                 }else if (day.equals("Wednesday")){
@@ -99,7 +99,6 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-//        myTextArea.append("key pressed! ");
     }
 
     @Override
