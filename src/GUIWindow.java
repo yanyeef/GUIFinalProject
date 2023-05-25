@@ -45,17 +45,17 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
             String text = button.getText();
             if(text.equals("enterTask")){
                 String dateAndTask = textField1.getText();
-                String day = dateAndTask.substring(0, dateAndTask.indexOf(", "));
+                String day = dateAndTask.substring(0, dateAndTask.indexOf(", ")).toLowerCase();
                 String task = dateAndTask.substring(dateAndTask.indexOf(", ") +1);
-                if(day.equals("Monday")){
+                if(day.equals("monday")){
                    textArea1.append("\n " + task);
-                } else if (day.equals("Tuesday")){
+                } else if (day.equals("tuesday")){
                     textArea2.append("\n " + task);
-                }else if (day.equals("Wednesday")){
+                }else if (day.equals("wednesday")){
                     textArea3.append("\n " + task);
-                }else if (day.equals("Thursday")){
+                }else if (day.equals("thursday")){
                     textArea4.append("\n " + task);
-                }else if (day.equals("Friday")){
+                }else if (day.equals("friday")){
                     textArea5.append("\n " + task);
                 }
                 textField1.setText("");
