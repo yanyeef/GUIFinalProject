@@ -32,11 +32,11 @@ public class GUIMain extends JFrame implements ActionListener, KeyListener{
         if(source instanceof JButton){
             JButton button = (JButton) source;
             String text = button.getText();
-            if(text.equals("generalListButton")){
-
+            if(text.equals("General List")){
+                GUIGeneral g = new GUIGeneral();
             }else if(text.equals("Weekly List")){
                 GUIWindow m = new GUIWindow();
-            }else if(text.equals("monthlyListButton")){
+            }else if(text.equals("Monthly List")){
 
             }
         }
