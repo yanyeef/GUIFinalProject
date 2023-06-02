@@ -39,8 +39,18 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
     private JTextArea textArea9;
     private JCheckBox B10;
     private JTextArea textArea10;
-    private JTextPane textPane1;
+    private JTextArea ta1;
+    private JTextArea ta2;
+    private JTextArea ta3;
+    private JTextArea ta4;
+    private JTextArea ta5;
+    private JTextArea ta6;
+    private JTextArea ta7;
+    private JTextArea ta8;
+    private JTextArea ta9;
+    private JTextArea ta10;
     private ArrayList<JTextArea> jTA;
+    private ArrayList<JTextArea> date;
     private int i;
 
     public GUIGeneral(){
@@ -58,6 +68,9 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
         enterButton.addActionListener(this);
         JTextArea[] a = {textArea1, textArea2, textArea3,textArea4, textArea5, textArea6, textArea7, textArea8, textArea9,textArea10};
         jTA = new ArrayList<>(Arrays.asList(a));
+
+        JTextArea[] d = {ta1, ta2, ta3,ta4, ta5, ta6, ta7, ta8, ta9,ta10};
+        date = new ArrayList<>(Arrays.asList(d));
         B1.addActionListener(this);
         B2.addActionListener(this);
         B3.addActionListener(this);
@@ -117,16 +130,15 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
             JButton button = (JButton)source;
             String text = button.getText();
             JTextArea a = textArea1;
+            JTextArea a2 = ta1;
             if(text.equals("Enter")) {
                 String tA = "textArea" + i;
                 String task = textField1.getText();
                 String month = comboBox1.getSelectedItem().toString();
-//                for(JTextArea t : jTA){
-//                    if(t.toString().equals(tA)){
-//                        i++;
-//                        a = t;
-//                    }
-//                }
+                String day = comboBox2.getSelectedItem().toString();
+                String year = comboBox3.getSelectedItem().toString();
+                a2 = date.get(i-1);
+                a2.append(month + " " + day + ", " + year);
                 a= jTA.get(i-1);
                 a.append(task);
                 i++;
