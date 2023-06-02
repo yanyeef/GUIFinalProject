@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 import java.awt.event.ActionEvent;
@@ -17,6 +16,9 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
     private JButton enterTaskButton;
     private JButton enterCompletedButton;
     private JButton resetButton;
+    private JTextArea textArea6;
+    private JTextArea textArea7;
+    private JButton homeButton;
     private JCheckBox checkBox1;
 
     public GUIWindow(){
@@ -28,13 +30,14 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
     private void createUIComponents() {
         setContentPane(mainPanel);
         setTitle("Planner/To do List");
-        setSize(900,600);
+        setSize(1100,600);
 
         setLocation(450, 100);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         enterTaskButton.addActionListener(this);
         enterCompletedButton.addActionListener(this);
         resetButton.addActionListener(this);
+        homeButton.addActionListener(this);
         setVisible(true);
     }
 
@@ -87,6 +90,9 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                 textArea3.setText("");
                 textArea4.setText("");
                 textArea5.setText("");
+            } else if (text.equals("Home")){
+                GUIMain m = new GUIMain();
+                setVisible(false);
             }
         }
 

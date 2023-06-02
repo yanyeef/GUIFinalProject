@@ -49,8 +49,11 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
     private JTextArea ta8;
     private JTextArea ta9;
     private JTextArea ta10;
+    private JButton resetButton;
+    private JButton homeButton;
     private ArrayList<JTextArea> jTA;
     private ArrayList<JTextArea> date;
+    private ArrayList<JCheckBox> box;
     private int i;
 
     public GUIGeneral(){
@@ -68,9 +71,10 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
         enterButton.addActionListener(this);
         JTextArea[] a = {textArea1, textArea2, textArea3,textArea4, textArea5, textArea6, textArea7, textArea8, textArea9,textArea10};
         jTA = new ArrayList<>(Arrays.asList(a));
-
         JTextArea[] d = {ta1, ta2, ta3,ta4, ta5, ta6, ta7, ta8, ta9,ta10};
         date = new ArrayList<>(Arrays.asList(d));
+        JCheckBox[] c = {B1, B2, B3, B4, B5, B6, B7, B8, B9, B10};
+        box = new ArrayList<>(Arrays.asList(c));
         B1.addActionListener(this);
         B2.addActionListener(this);
         B3.addActionListener(this);
@@ -81,6 +85,8 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
         B8.addActionListener(this);
         B9.addActionListener(this);
         B10.addActionListener(this);
+        resetButton.addActionListener(this);
+        homeButton.addActionListener(this);
         i=1;
     }
 
@@ -89,8 +95,7 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
         if(source instanceof JCheckBox){
             JCheckBox check = (JCheckBox) source;
             Hashtable<TextAttribute, Object> map = new Hashtable<TextAttribute, Object>();
-            Font font = new Font(Font.SERIF, Font.PLAIN, 24);
-            /* Strikethrouh is easy */
+            Font font = new Font(Font.SERIF, Font.PLAIN, 12);
             map.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
             font = font.deriveFont(map);
              if(B1.isSelected()) {
@@ -142,6 +147,20 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
                 a= jTA.get(i-1);
                 a.append(task);
                 i++;
+            }
+            if(text.equals("Reset")){
+                for(int i = 0; i < jTA.size(); i++){
+                    Font font = new Font(Font.SERIF, Font.PLAIN, 12);
+                    jTA.get(i).setText("");
+                    jTA.get(i).setFont(font);
+                    date.get(i).setText("");
+                    box.get(i).setSelected(false);
+                }
+                i=1;
+            }
+            if(text.equals("Home")){
+                GUIMain m = new GUIMain();
+                setVisible(false);
             }
         }
     }
