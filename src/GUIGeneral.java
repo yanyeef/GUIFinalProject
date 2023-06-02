@@ -89,7 +89,6 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
         homeButton.addActionListener(this);
         i=1;
     }
-
     public void actionPerformed(ActionEvent e){
         Object source = e.getSource();
         if(source instanceof JCheckBox){
