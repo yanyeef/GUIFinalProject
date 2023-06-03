@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.awt.font.TextAttribute;
 import java.util.Hashtable;
+import javax.swing.JOptionPane;
 
 public class GUIWindow extends JFrame implements ActionListener, KeyListener {
     private JTextField textField1;
@@ -22,7 +23,16 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
     private JTextArea textArea6;
     private JTextArea textArea7;
     private JButton homeButton;
+    private JButton completedButton;
+    private JTextField textField3;
     private JCheckBox checkBox1;
+    private String mon;
+    private String tues;
+    private String wed;
+    private String thurs;
+    private String fri;
+    private String sat;
+    private String sun;
 
     public GUIWindow(){
         textField1.setText("Enter task to do : (day, task)");
@@ -34,16 +44,45 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
         setContentPane(mainPanel);
         setTitle("Planner/To do List");
         setSize(1150,600);
-
         setLocation(450, 100);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         enterTaskButton.addActionListener(this);
         enterCompletedButton.addActionListener(this);
         resetButton.addActionListener(this);
         homeButton.addActionListener(this);
+        completedButton.addActionListener(this);
         setVisible(true);
+        mon = "Monday\n";
+        tues = "Tuesday\n";
+        wed = "Wednesday\n";
+        thurs=  "Thursday\n";
+        fri= "Friday\n";
+        sat = "Saturday\n";
+        sun = "Sunday\n";
     }
 
+    public String mondayC(){
+        return mon;
+    }
+
+    public String tuesdayC(){
+        return tues;
+    }
+    public String wednesdayC(){
+        return wed;
+    }
+    public String thursdayC(){
+        return thurs;
+    }
+    private String fridayC(){
+        return fri;
+    }
+    private String saturdayC(){
+        return sat;
+    }
+    private String sundayC(){
+        return sun;
+    }
     public void actionPerformed(ActionEvent e){
         Object source = e.getSource();
         if(source instanceof JButton){
@@ -67,7 +106,7 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                 textField1.setText("");
             }else if(text.equals("enterCompleted")){
                 String dateAndTask = textField2.getText();
-                String d = textField2.getText();
+                String d = textField2.getText().toLowerCase();
                 String task = dateAndTask.substring(dateAndTask.indexOf(", ") +1);
                 int len = task.length();
                 JTextArea t = textArea1;
@@ -87,7 +126,8 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                     }else if(d.equals("friday")){
                         textArea5.setFont(font);
                     }
-                }else {
+                }
+                if(dateAndTask.contains(", ")){
                     Hashtable<TextAttribute, Object> map = new Hashtable<TextAttribute, Object>();
                     Font font = new Font(Font.SANS_SERIF, Font.PLAIN, 20);
                     map.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
@@ -95,14 +135,19 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                     String day = dateAndTask.substring(0, dateAndTask.indexOf(", ")).toLowerCase();
                     if (day.equals("monday")) {
                         t = textArea1;
+                        mon += task + "\n";
                     } else if (day.equals("tuesday")) {
                         t = textArea2;
+                        tues += task + "\n";
                     } else if (day.equals("wednesday")) {
                         t = textArea3;
+                        wed += task + "\n";
                     } else if (day.equals("thursday")) {
                         t = textArea4;
+                        thurs += task + "\n";
                     } else if (day.equals("friday")) {
                         t = textArea5;
+                        fri += task + "\n";
                     }
                     String currentText = t.getText();
                     String before = currentText.substring(0, currentText.indexOf(task));
@@ -118,9 +163,26 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                 textArea3.setText("");
                 textArea4.setText("");
                 textArea5.setText("");
+                textArea6.setText("");
+                textArea7.setText("");
+                textArea1.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 20));
+                textArea2.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 20));
+                textArea3.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 20));
+                textArea4.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 20));
+                textArea5.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 20));
+                textArea6.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 20));
+                textArea7.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 20));
             } else if (text.equals("Home")){
                 GUIMain m = new GUIMain();
                 setVisible(false);
+            } else if (text.equals("TasksCompleted")){
+                JFrame j = new JFrame();
+                j.getContentPane();
+                String d = textField3.getText();
+                if(d.equals("Monday")){
+                    JOptionPane.showMessageDialog(j.getComponent(0), mondayC());
+                }
+
             }
         }
 
