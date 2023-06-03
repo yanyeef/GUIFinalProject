@@ -38,6 +38,7 @@ public class GUIMain extends JFrame implements ActionListener, KeyListener{
                 setVisible(false);
             }else if(text.equals("Weekly List")){
                 GUIWindow m = new GUIWindow();
+                setVisible(false);
             }else if(text.equals("Monthly List")){
 
             }

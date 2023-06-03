@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="55f47" binding="mainPanel" layout-manager="GridLayoutManager" row-count="5" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="55f47" binding="mainPanel" layout-manager="GridLayoutManager" row-count="5" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -25,52 +25,52 @@
           </hspacer>
           <component id="335a6" class="javax.swing.JTextArea" binding="textArea5" default-binding="true">
             <constraints>
-              <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+              <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="100" height="50"/>
               </grid>
             </constraints>
             <properties>
-              <font name="Bahnschrift" size="20" style="0"/>
+              <font name="SansSerif" size="20" style="0"/>
               <text value=""/>
             </properties>
           </component>
           <component id="341c" class="javax.swing.JTextArea" binding="textArea4" default-binding="true">
             <constraints>
-              <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+              <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="100" height="50"/>
               </grid>
             </constraints>
             <properties>
-              <font name="Bahnschrift" size="20" style="0"/>
+              <font name="SansSerif" size="20" style="0"/>
               <foreground color="-12829636"/>
               <text value=""/>
             </properties>
           </component>
           <component id="6e36" class="javax.swing.JTextArea" binding="textArea2" default-binding="true">
             <constraints>
-              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="100" height="50"/>
+              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
               </grid>
             </constraints>
             <properties>
-              <font name="Bahnschrift" size="20" style="0"/>
+              <font name="SansSerif" size="20" style="0"/>
               <text value=""/>
             </properties>
           </component>
           <component id="a2f18" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
             <constraints>
-              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="100" height="50"/>
+              <grid row="1" column="2" row-span="1" col-span="2" vsize-policy="6" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
               </grid>
             </constraints>
             <properties>
-              <font name="Bahnschrift" size="20"/>
+              <font name="SansSerif" size="20"/>
               <text value=""/>
             </properties>
           </component>
           <component id="9479a" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Monospaced" size="28" style="1"/>
@@ -79,7 +79,7 @@
           </component>
           <component id="52a38" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Monospaced" size="28" style="1"/>
@@ -88,7 +88,7 @@
           </component>
           <component id="2eb39" class="javax.swing.JSeparator">
             <constraints>
-              <grid row="1" column="8" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="9" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties/>
           </component>
@@ -106,7 +106,7 @@
           </component>
           <component id="c512f" class="javax.swing.JTextField" binding="textField1" default-binding="true">
             <constraints>
-              <grid row="2" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="2" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
@@ -117,7 +117,7 @@
           </component>
           <component id="4fb05" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Monospaced" size="28" style="1"/>
@@ -126,23 +126,28 @@
           </component>
           <component id="d6cc1" class="javax.swing.JTextArea" binding="textArea6" default-binding="true">
             <constraints>
-              <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="50"/>
+              <grid row="1" column="8" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="100" height="50"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="SansSerif" size="20"/>
+            </properties>
           </component>
           <component id="1b8f3" class="javax.swing.JTextArea" binding="textArea7" default-binding="true">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="100" height="50"/>
+                <preferred-size width="150" height="50"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="SansSerif" size="20"/>
+              <text value=""/>
+            </properties>
           </component>
           <component id="191f" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Monospaced" size="28" style="1"/>
@@ -160,7 +165,7 @@
           </component>
           <component id="99658" class="javax.swing.JButton" binding="enterTaskButton">
             <constraints>
-              <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Lucida Sans Typewriter" size="14" style="0"/>
@@ -169,7 +174,7 @@
           </component>
           <component id="da990" class="javax.swing.JButton" binding="enterCompletedButton">
             <constraints>
-              <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Lucida Sans Typewriter" size="14" style="0"/>
@@ -178,7 +183,7 @@
           </component>
           <component id="6dd2e" class="javax.swing.JButton" binding="resetButton" default-binding="true">
             <constraints>
-              <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="4" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Lucida Sans Typewriter" size="14" style="0"/>
@@ -187,7 +192,7 @@
           </component>
           <component id="b6d68" class="javax.swing.JTextField" binding="textField2" default-binding="true">
             <constraints>
-              <grid row="3" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="3" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
@@ -197,18 +202,18 @@
           </component>
           <component id="eab74" class="javax.swing.JTextArea" binding="textArea3" default-binding="true">
             <constraints>
-              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+              <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="100" height="50"/>
               </grid>
             </constraints>
             <properties>
-              <font name="Bahnschrift" size="20" style="0"/>
+              <font name="SansSerif" size="20" style="0"/>
               <text value=""/>
             </properties>
           </component>
           <component id="5f152" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+              <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="147" height="16"/>
               </grid>
             </constraints>
@@ -219,7 +224,7 @@
           </component>
           <component id="a8c9d" class="javax.swing.JButton" binding="homeButton" default-binding="true">
             <constraints>
-              <grid row="3" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Home"/>
