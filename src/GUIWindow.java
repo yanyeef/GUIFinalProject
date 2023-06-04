@@ -178,6 +178,13 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                 textArea5.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 20));
                 textArea6.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 20));
                 textArea7.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 20));
+                mon = "Monday\n";
+                tues = "Tuesday\n";
+                wed = "Wednesday\n";
+                thurs=  "Thursday\n";
+                fri= "Friday\n";
+                sat = "Saturday\n";
+                sun = "Sunday\n";
             } else if (text.equals("Home")){
                 GUIMain m = new GUIMain();
                 setVisible(false);
