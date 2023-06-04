@@ -97,35 +97,12 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
             Font font = new Font(Font.SERIF, Font.PLAIN, 12);
             map.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
             font = font.deriveFont(map);
-             if(B1.isSelected()) {
-                textArea1.setFont(font);
-             }
-             if( B2.isSelected()){
-                 textArea2.setFont(font);
-             }
-            if( B3.isSelected()){
-                textArea3.setFont(font);
-            }
-            if( B4.isSelected()){
-                textArea4.setFont(font);
-            }
-            if( B5.isSelected()){
-                textArea5.setFont(font);
-            }
-            if( B6.isSelected()){
-                textArea6.setFont(font);
-            }
-            if( B7.isSelected()){
-                textArea7.setFont(font);
-            }
-            if( B8.isSelected()){
-                textArea8.setFont(font);
-            }
-            if( B9.isSelected()){
-                textArea9.setFont(font);
-            }
-            if( B10.isSelected()){
-                textArea10.setFont(font);
+            for(int i = 0; i< box.size();i++) {
+                if (!box.get(i).isSelected()){
+                    jTA.get(i).setFont(new Font(Font.SERIF, Font.PLAIN, 14));
+                }else {
+                    jTA.get(i).setFont(font);
+                }
             }
         }
 
