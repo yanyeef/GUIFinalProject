@@ -9,7 +9,6 @@ public class GUIMain extends JFrame implements ActionListener, KeyListener{
     private JButton generalListButton;
     private JPanel mainPanel;
     private JButton weeklyListButton;
-    private JButton monthlyListButton;
 
     public GUIMain(){
         createUIComponents();
@@ -24,7 +23,6 @@ public class GUIMain extends JFrame implements ActionListener, KeyListener{
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         generalListButton.addActionListener(this);
         weeklyListButton.addActionListener(this);
-        monthlyListButton.addActionListener(this);
         setVisible(true);
     }
 
@@ -39,8 +37,6 @@ public class GUIMain extends JFrame implements ActionListener, KeyListener{
             }else if(text.equals("Weekly List")){
                 GUIWindow m = new GUIWindow();
                 setVisible(false);
-            }else if(text.equals("Monthly List")){
-
             }
         }
 

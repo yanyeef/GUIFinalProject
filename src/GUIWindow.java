@@ -135,19 +135,25 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                     String day = dateAndTask.substring(0, dateAndTask.indexOf(", ")).toLowerCase();
                     if (day.equals("monday")) {
                         t = textArea1;
-                        mon += task + "\n";
+                        mon += "- "+ task + "\n ";
                     } else if (day.equals("tuesday")) {
                         t = textArea2;
-                        tues += task + "\n";
+                        tues += "- "+ task + "\n";
                     } else if (day.equals("wednesday")) {
                         t = textArea3;
-                        wed += task + "\n";
+                        wed += "- "+ task + "\n";
                     } else if (day.equals("thursday")) {
                         t = textArea4;
-                        thurs += task + "\n";
+                        thurs +="- "+ task + "\n";
                     } else if (day.equals("friday")) {
                         t = textArea5;
-                        fri += task + "\n";
+                        fri += "- "+task + "\n";
+                    } else if (day.equals("saturday")) {
+                        t = textArea6;
+                        sat += "- "+task + "\n";
+                    }else if (day.equals("sunday")) {
+                        t = textArea7;
+                        sun += "- "+task + "\n";
                     }
                     String currentText = t.getText();
                     String before = currentText.substring(0, currentText.indexOf(task));
@@ -181,6 +187,18 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                 String d = textField3.getText();
                 if(d.equals("Monday")){
                     JOptionPane.showMessageDialog(j.getComponent(0), mondayC());
+                }else if (d.equals("Tuesday")){
+                    JOptionPane.showMessageDialog(j.getComponent(0), tuesdayC());
+                }else if (d.equals("Wednesday")){
+                    JOptionPane.showMessageDialog(j.getComponent(0), wednesdayC());
+                }else if (d.equals("Thursday")){
+                    JOptionPane.showMessageDialog(j.getComponent(0), thursdayC());
+                }else if (d.equals("Friday")){
+                    JOptionPane.showMessageDialog(j.getComponent(0), fridayC());
+                }else if (d.equals("Saturday")){
+                    JOptionPane.showMessageDialog(j.getComponent(0), saturdayC());
+                }else if (d.equals("Sunday")){
+                    JOptionPane.showMessageDialog(j.getComponent(0), sundayC());
                 }
 
             }
