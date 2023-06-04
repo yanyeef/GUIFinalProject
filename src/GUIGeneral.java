@@ -146,6 +146,13 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
                 a= jTA.get(i-1);
                 a.append(task);
                 i++;
+                for(int i = 0; i<jTA.size();i++){
+                    if(jTA.get(i).getText().equals("")){
+                        box.get(i).setEnabled(false);
+                    } else{
+                        box.get(i).setEnabled(true);
+                    }
+                }
             }
             if(text.equals("Reset")){
                 for(int i = 0; i < jTA.size(); i++){
