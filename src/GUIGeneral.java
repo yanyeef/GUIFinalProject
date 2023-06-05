@@ -94,7 +94,7 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
         if(source instanceof JCheckBox){
             JCheckBox check = (JCheckBox) source;
             Hashtable<TextAttribute, Object> map = new Hashtable<TextAttribute, Object>();
-            Font font = new Font(Font.SERIF, Font.PLAIN, 12);
+            Font font = new Font(Font.SERIF, Font.PLAIN, 14);
             map.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
             font = font.deriveFont(map);
             for(int i = 0; i< box.size();i++) {
