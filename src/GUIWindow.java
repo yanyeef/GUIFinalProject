@@ -115,31 +115,31 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                 int len = task.length();
                 JTextArea t = textArea1;
                 if(!dateAndTask.contains(", ")){
-                    Hashtable<TextAttribute, Object> map = new Hashtable<TextAttribute, Object>();
-                    Font font = new Font(Font.SANS_SERIF, Font.PLAIN, 20);
-                    map.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
-                    font = font.deriveFont(map);
+//                    Hashtable<TextAttribute, Object> map = new Hashtable<TextAttribute, Object>();
+//                    Font font = new Font(Font.SANS_SERIF, Font.PLAIN, 20);
+//                    map.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
+//                    font = font.deriveFont(map);
                     if(d.equals("monday")){
-                        textArea1.setFont(font);
                         mon += textArea1.getText().trim()+ "\n";
+                        textArea1.setText("");
                     }else if(d.equals("tuesday")){
-                        textArea2.setFont(font);
                         tues += textArea2.getText().trim()+ "\n";
+                        textArea2.setText("");
                     }else if (d.equals("wednesday")){
-                        textArea3.setFont(font);
                         wed += textArea3.getText().trim()+ "\n";
+                        textArea3.setText("");
                     }else if(d.equals("thursday")){
-                        textArea4.setFont(font);
                         thurs += textArea4.getText().trim()+ "\n";
+                        textArea4.setText("");
                     }else if(d.equals("friday")){
-                        textArea5.setFont(font);
                         fri += textArea5.getText().trim()+ "\n";
+                        textArea5.setText("");
                     }else if(d.equals("saturday")){
-                        textArea6.setFont(font);
                         sat += textArea6.getText().trim()+ "\n";
+                        textArea6.setText("");
                     }else if(d.equals("sunday")){
-                        textArea7.setFont(font);
                         sun += textArea7.getText().trim()+ "\n";
+                        textArea7.setText("");
                     }
                 }
                 if(dateAndTask.contains(", ")){
@@ -223,7 +223,7 @@ public class GUIWindow extends JFrame implements ActionListener, KeyListener {
                 }else if (d.equals("Sunday")){
                     JOptionPane.showMessageDialog(j.getComponent(0), sundayC());
                 }
-                textField3.setText("");
+
 
             }
         }
