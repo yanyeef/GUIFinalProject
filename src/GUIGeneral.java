@@ -106,7 +106,6 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
             }
         }
 
-
         if(source instanceof JButton){
             JButton button = (JButton)source;
             String text = button.getText();
