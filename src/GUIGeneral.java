@@ -100,8 +100,10 @@ public class GUIGeneral extends JFrame implements ActionListener, KeyListener{
             for(int i = 0; i< box.size();i++) {
                 if (!box.get(i).isSelected()){
                     jTA.get(i).setFont(new Font(Font.SERIF, Font.PLAIN, 14));
+                    date.get(i).setFont(new Font(Font.SERIF, Font.PLAIN, 14));
                 }else {
                     jTA.get(i).setFont(font);
+                    date.get(i).setFont(font);
                 }
             }
         }
